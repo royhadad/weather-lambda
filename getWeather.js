@@ -9,6 +9,8 @@ module.exports = async (search) => {
         }
     }
     search = lowerCase(search);
+    console.log('hello world');
+
     return {
         ok: true,
         status: 200,
