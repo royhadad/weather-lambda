@@ -9,6 +9,7 @@ module.exports = async (search) => {
         }
     }
     search = lowerCase(search);
+    console.log('hello');
 
     let res = await fetch(`api.openweathermap.org/data/2.5/weather?q=${search}&appid=${OPEN_WEATHER_MAP_API_KEY}`);
     let data = await res.json()
