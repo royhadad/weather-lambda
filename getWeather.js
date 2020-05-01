@@ -9,7 +9,7 @@ module.exports = async (search) => {
         }
     }
     search = lowerCase(search);
-    console.log('hello world');
+    console.log('hello worldddd');
 
     return {
         ok: true,
