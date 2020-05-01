@@ -1,3 +1,4 @@
+require('dotenv').config({ path: __dirname + '/.env' });
 const getWeather = require('./getWeather');
 const getSearchHistory = require('./getSearchHistory');
 const postWeather = require('./postWeather');
