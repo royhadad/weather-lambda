@@ -1,5 +1,6 @@
-const OPEN_WEATHER_MAP_API_KEY = process.env.OPEN_WEATHER_MAP_API_KEY;
+const fetch = require('node-fetch');
 const { lowerCase } = require('lower-case');
+const OPEN_WEATHER_MAP_API_KEY = process.env.OPEN_WEATHER_MAP_API_KEY;
 
 module.exports = async (search) => {
     if (!search) {
@@ -9,13 +10,6 @@ module.exports = async (search) => {
         }
     }
     search = lowerCase(search);
-    console.log('hello worldddd');
-
-    return {
-        ok: true,
-        status: 200,
-        body: JSON.stringify(Object.keys(process.env))
-    }
 
     let res = await fetch(`api.openweathermap.org/data/2.5/weather?q=${search}&appid=${OPEN_WEATHER_MAP_API_KEY}`);
     let data = await res.json()
